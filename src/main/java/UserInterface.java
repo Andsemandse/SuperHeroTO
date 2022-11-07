@@ -4,6 +4,7 @@ public class UserInterface {
     private final Database database = new Database();
     private int numberOfSuperheroes = 0;
     Scanner sc = new Scanner(System.in);
+    static int removeNumber;
 
     public void startProgram() {
         int brugerValg = 0;
@@ -49,6 +50,12 @@ public class UserInterface {
                 System.out.println("\n Hvilken superhelt vil du ændre? Tast venligst nummer: ");
                 database.editSuperhero(sc.nextInt());
             } else if(brugerValg == 5) {
+                System.out.println("Fjern en superhelt fra din database: \n");
+                database.listSuperHeroes();
+                System.out.print("Angiv nummeret på superhelten, som ønskes fjernet: ");
+                removeNumber = Integer.parseInt(sc.nextLine());
+                database.removeSuperhero();
+
 
             } else if (brugerValg == 9) {
                 System.exit(1);
