@@ -53,11 +53,4 @@ public class Database {
         System.out.println("Fjernet nummer: " + UserInterface.removeNumber + " nummer fra databasen:");
     }
 
-    public void listSuperHeroes() {
-        int i = 1;
-
-        for (Superhero superhero : database) {
-            System.out.println(i++ + ": \n" + superhero);
-        }
-    }
 }

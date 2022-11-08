@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="">
+    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Vores helte kan nu slettes, ændringer i Database og Userinterface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
@@ -71,8 +71,16 @@
       <updated>1667816436199</updated>
       <workItem from="1667816437976" duration="574000" />
       <workItem from="1667817316373" duration="321000" />
-      <workItem from="1667835152991" duration="667000" />
+      <workItem from="1667835152991" duration="2368000" />
     </task>
+    <task id="LOCAL-00001" summary="Vores helte kan nu slettes, ændringer i Database og Userinterface">
+      <created>1667836198839</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667836198839</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Vores helte kan nu slettes, ændringer i Database og Userinterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vores helte kan nu slettes, ændringer i Database og Userinterface" />
   </component>
 </project>

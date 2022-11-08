@@ -51,7 +51,7 @@ public class UserInterface {
                 database.editSuperhero(sc.nextInt());
             } else if(brugerValg == 5) {
                 System.out.println("Fjern en superhelt fra din database: \n");
-                database.listSuperHeroes();
+                database.getArrayList(numberOfSuperheroes);
                 System.out.print("Angiv nummeret på superhelten, som ønskes fjernet: ");
                 removeNumber = Integer.parseInt(sc.nextLine());
                 database.removeSuperhero();
