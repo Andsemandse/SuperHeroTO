@@ -35,10 +35,6 @@ public class Database {
 
     }
 
-    public void deleteSuperhero() {
-
-    }
-
     //methods for test purposes
     public ArrayList<Superhero> getSuperheroes() {
         return database;
@@ -50,7 +46,7 @@ public class Database {
 
     public void removeSuperhero() {
         database.remove(UserInterface.removeNumber - 1);
-        System.out.println("Fjernet nummer: " + UserInterface.removeNumber + " nummer fra databasen:");
+        System.out.println("Fjernet superhelt nummer " + UserInterface.removeNumber + " fra databasen:");
     }
 
 }

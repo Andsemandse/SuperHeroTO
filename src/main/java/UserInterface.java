@@ -38,8 +38,10 @@ public class UserInterface {
                 database.addSuperhero(superheroName, realName, yearCreated, superPowers, isHuman, strength);
                 numberOfSuperheroes++;
             } else if (brugerValg == 2) {
-                System.out.println("Liste af superhelte:\n");
-                System.out.println(database.getArrayList(numberOfSuperheroes));
+                if(!database.getSuperheroes().isEmpty()){
+                    System.out.println("Liste af superhelte:\n");
+                    System.out.println(database.getArrayList(numberOfSuperheroes));
+                }else System.out.println("Der findes ingen superhelte i databasen.\n");
             } else if (brugerValg == 3) {
                 System.out.println("Tast navnet. eller del af navnet, på den superhelt, du vil finde:");
                 String searchQuery = sc.next();
