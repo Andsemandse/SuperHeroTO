@@ -67,7 +67,7 @@ public class Superhero {
         } else if (isHuman == false) {
             isHumanString = "NEJ";
         }
-        return "Superheltenavn: " + superheroName + "\nRigtige navn: " + realName + "\nÅr skabt: " + yearCreated + "\nSuperkrafter: " + superPowers + "\nEr menneske: " + isHumanString + "\nStyrke: " + strength + "\n";
+        return "Superheltenavn: " + superheroName + "\nRigtige navn: " + realName + "\nÅr skabt: " + yearCreated + "\nSuperkræfter: " + superPowers + "\nEr menneske: " + isHumanString + "\nStyrke: " + strength + "\n";
     }
 
 }

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Vores helte kan nu slettes, ændringer i Database og Userinterface">
+    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667836198839</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom.">
+      <created>1667917165247</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667917165247</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vores helte kan nu slettes, ændringer i Database og Userinterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vores helte kan nu slettes, ændringer i Database og Userinterface" />
+    <MESSAGE value="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom." />
   </component>
 </project>

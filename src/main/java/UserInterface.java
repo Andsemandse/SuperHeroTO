@@ -50,15 +50,15 @@ public class UserInterface {
                 System.out.println("Liste af superhelte:\n");
                 System.out.println(database.getArrayList(numberOfSuperheroes));
                 System.out.println("\n Hvilken superhelt vil du ændre? Tast venligst nummer: ");
-                database.editSuperhero(sc.nextInt());
+                int superheroNumber = sc.nextInt();
+                database.editSuperhero(database.getSuperhero(superheroNumber));
             } else if(brugerValg == 5) {
                 System.out.println("Fjern en superhelt fra din database: \n");
                 database.getArrayList(numberOfSuperheroes);
                 System.out.print("Angiv nummeret på superhelten, som ønskes fjernet: ");
                 removeNumber = Integer.parseInt(sc.nextLine());
                 database.removeSuperhero();
-
-
+                numberOfSuperheroes--;
             } else if (brugerValg == 9) {
                 System.exit(1);
             }
