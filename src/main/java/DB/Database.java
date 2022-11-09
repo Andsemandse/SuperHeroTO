@@ -1,5 +1,11 @@
+package DB;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+import Shero.Superhero;
+import Ui.UserInterface;
+import DB.Database;
+
 
 public class Database {
 

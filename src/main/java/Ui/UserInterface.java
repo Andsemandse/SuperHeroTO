@@ -1,10 +1,14 @@
+package Ui;
+
+import DB.Database;
+
 import java.util.Scanner;
 
 public class UserInterface {
     private final Database database = new Database();
     private int numberOfSuperheroes = 0;
     Scanner sc = new Scanner(System.in);
-    static int removeNumber;
+   public static int removeNumber;
 
     public void startProgram() {
         int brugerValg = 0;
