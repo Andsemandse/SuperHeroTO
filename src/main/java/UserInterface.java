@@ -101,4 +101,49 @@ public class UserInterface {
         }while (shouldContinue);
         return isHuman;
     }
+    public void caseSortSuperheroes() {
+        System.out.println("Sorter efter et af følgende kriterier:");
+        System.out.println("""
+                1. Rigtige navn
+                2. Helte navn
+                3. Superheltens årstal
+                4. Superkraft
+                5. Menneske eller ej
+                6. Styrke
+                """);
+
+        int sortChoice = readInteger();
+
+        switch (sortChoice) {
+            case 1:
+                controller.sortByrealName();
+                numberOfSuperheroes();
+                break;
+
+            case 2:
+                controller.sortBysuperheroName();
+                numberOfSuperheroes();
+                break;
+
+            case 3:
+                controller.sortByyearCreated();
+                numberOfSuperheroes();
+                break;
+
+            case 4:
+                controller.sortBysuperPowers();
+                numberOfSuperheroes();
+                break;
+
+            case 5:
+                controller.sortByisHuman();
+                numberOfSuperheroes();
+                break;
+
+            case 6:
+                controller.sortBystrength();
+                numberOfSuperheroes();
+                break;
+        }
+    }
 }
