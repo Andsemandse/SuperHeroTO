@@ -1,4 +1,6 @@
 import java.util.Comparator;
+import Shero.Superhero;
+
 
 public class SuperPowerComparator implements Comparator<Superhero>
 {

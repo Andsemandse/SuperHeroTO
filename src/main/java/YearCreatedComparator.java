@@ -1,3 +1,5 @@
+import Shero.Superhero;
+
 import java.util.Comparator;
 
 public class YearCreatedComparator implements Comparator<Superhero>

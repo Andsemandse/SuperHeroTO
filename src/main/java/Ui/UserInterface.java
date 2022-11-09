@@ -3,6 +3,11 @@ package Ui;
 import DB.Database;
 
 import java.util.Scanner;
+import Shero.Superhero;
+import Controller.Controller;
+
+
+
 
 public class UserInterface {
     private final Database database = new Database();
@@ -120,34 +125,37 @@ public class UserInterface {
 
         switch (sortChoice) {
             case 1:
-                controller.sortByrealName();
+                Controller.sortByrealName();
                 numberOfSuperheroes();
                 break;
 
             case 2:
-                controller.sortBysuperheroName();
+                Controller.sortBysuperheroName();
                 numberOfSuperheroes();
                 break;
 
             case 3:
-                controller.sortByyearCreated();
+                Controller.sortByyearCreated();
                 numberOfSuperheroes();
                 break;
 
             case 4:
-                controller.sortBysuperPowers();
+                Controller.sortBysuperPowers();
                 numberOfSuperheroes();
                 break;
 
             case 5:
-                controller.sortByisHuman();
+                Superhero.sortByisHuman();
                 numberOfSuperheroes();
                 break;
 
             case 6:
-                controller.sortBystrength();
+                Controller.sortBystrength();
                 numberOfSuperheroes();
                 break;
         }
+    }
+
+    private void numberOfSuperheroes() {
     }
 }

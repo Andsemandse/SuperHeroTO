@@ -20,6 +20,9 @@ public class Superhero {
         this.strength = strength;
     }
 
+    public static void sortByisHuman() {
+    }
+
     //getter metoder
     public String getSuperheroName(){
         return superheroName;
