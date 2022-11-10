@@ -57,34 +57,46 @@ public class Database {
     }
     public void editSuperhero(Superhero hero) {
         System.out.println("Indtast ønskede superheltenavn(Tast Enter, hvis det skal forblive uændret): ");
+        System.out.println("Nuværende superheltenavn: " + hero.getSuperheroName());
         superheroName = sc.nextLine();
         if(!superheroName.isEmpty()) {
             hero.setSuperheroName(superheroName);
         }
         System.out.println("Indtast ønskede rigtige navn(Tast Enter, hvis det skal forblive uændret): ");
+        System.out.println("Nuværende rigtige navn: " + hero.getRealName());
         realName = sc.nextLine();
         if(!realName.isEmpty()) {
             hero.setRealName(realName);
         }
         System.out.println("Indtast ønskede skabelsesår(Tast Enter, hvis det skal forblive uændret): ");
+        System.out.println("Nuværende år skabt: " + hero.getYearCreated());
         yearCreated = sc.nextLine();
         if(!yearCreated.isEmpty()) {
             yearCreatedInt = Integer.parseInt(yearCreated);
             hero.setYearCreated(yearCreatedInt);
         }
         System.out.println("Indtast ønskede superkræfter(Tast Enter, hvis det skal forblive uændret): ");
+        System.out.println("Nuværende superkræfter: " + hero.getSuperPowers());
         superPowers = sc.nextLine();
         if(!superPowers.isEmpty()) {
             hero.setSuperPowers(superPowers);
         }
+
         System.out.println("Indtast om superhelten er menneske eller ej, 'j' ller 'n'(Tast Enter, hvis det skal forblive uændret): ");
+        if(hero.getIsHuman() == true){
+            System.out.println("Helten er menneske");
+        }else if(hero.getIsHuman() == false){
+            System.out.println("Helten er ikke menneske");
+        }
         isHumanChar = sc.nextLine();
         if(isHumanChar == "j"){
             hero.setHuman(true);
         }else if(isHumanChar == "n"){
             hero.setHuman(false);
         }
+
         System.out.println("Indtast ønskede styrke(Tast Enter, hvis det skal forblive uændret): ");
+        System.out.println("Nuværende styrke niveau: " + hero.getStrength());
         strength = sc.nextLine();
         if(!strength.isEmpty()) {
             strengthDouble = Double.parseDouble(strength);

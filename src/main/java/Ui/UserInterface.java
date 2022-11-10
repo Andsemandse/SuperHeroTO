@@ -60,7 +60,7 @@ public class UserInterface {
                 System.out.println("Indtast år skabt: ");
                 int yearCreated = readInteger();
                 sc.nextLine();
-                System.out.println("Indtast superkrafter: ");
+                System.out.println("Indtast superkræfter: ");
                 String superPowers = sc.nextLine();
                 System.out.println("Er et menneske? j/n: ");
                 boolean isHuman = checkBoolean();
@@ -85,7 +85,7 @@ public class UserInterface {
                     System.out.println(database.getArrayList(numberOfSuperheroes));
                     System.out.println("Hvilken superhelt vil du ændre? Tast venligst nummer: ");
                     int superheroNumber = sc.nextInt();
-                    if (database.getSize() > superheroNumber) {
+                    if (database.getSize() + 1 > superheroNumber) {
                         database.editSuperhero(database.getSuperhero(superheroNumber));
                     } else System.out.println("Tast venligst et nummer indenfor antallet af superhelte.");
                 }
