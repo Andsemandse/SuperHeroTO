@@ -22,21 +22,25 @@ public class UserInterface {
         if (!file.exists()) {
             file.createNewFile();
         }
-        FileInputStream fi = new FileInputStream("superheroes.txt");
-        ObjectInputStream oi = new ObjectInputStream(fi);
-        boolean shouldContinue = true;
-        Object obj = null;
-        while (shouldContinue) {
-            if (fi.available() != 0) {
-                obj = (Superhero) oi.readObject();
-                database.addHeroToDatabase((Superhero) obj);
-                numberOfSuperheroes++;
-            } else {
-                shouldContinue = false;
+        try{
+            FileInputStream fi = new FileInputStream("superheroes.txt");
+            ObjectInputStream oi = new ObjectInputStream(fi);
+            boolean shouldContinue = true;
+            Object obj = null;
+            while (shouldContinue) {
+                if (fi.available() != 0) {
+                    obj = (Superhero) oi.readObject();
+                    database.addHeroToDatabase((Superhero) obj);
+                    numberOfSuperheroes++;
+                } else {
+                    shouldContinue = false;
+                }
             }
+            fi.close();
+            oi.close();
+        }catch (Exception e){
+
         }
-        fi.close();
-        oi.close();
 
         int brugerValg = 0;
         do {
