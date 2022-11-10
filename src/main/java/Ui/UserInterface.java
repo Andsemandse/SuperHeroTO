@@ -2,29 +2,51 @@ package Ui;
 
 import DB.Database;
 
+import java.io.*;
 import java.util.Scanner;
+
 import Shero.Superhero;
 import Controller.Controller;
-
-
-
 
 public class UserInterface {
     private final Database database = new Database();
     private int numberOfSuperheroes = 0;
     Scanner sc = new Scanner(System.in);
-   public static int removeNumber;
+    public static int removeNumber;
 
-    public void startProgram() {
+    public void startProgram() throws Exception {
+        int index = 0;
+        File file = new File("superheroes.txt");
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileInputStream fi = new FileInputStream("superheroes.txt");
+        ObjectInputStream oi = new ObjectInputStream(fi);
+        boolean shouldContinue = true;
+        Object obj = null;
+        while (shouldContinue) {
+            if (fi.available() != 0) {
+                obj = (Superhero) oi.readObject();
+                database.addHeroToDatabase((Superhero) obj);
+                numberOfSuperheroes++;
+            } else {
+                shouldContinue = false;
+            }
+        }
+        fi.close();
+        oi.close();
+
         int brugerValg = 0;
         do {
+
             System.out.println("""
                     VELKOMMEN TIL SUPERHERO-UNIVERSET!
                     1. Opret superhelt
-                    2. Se alle superhelte
-                    3. Find superhelt
-                    4. Rediger superhelt
-                    5. Slet superhelt
+                    2. Vis alle superhelte
+                    3. Vis alle superhelte sorteret
+                    4. Find superhelt
+                    5. Rediger superhelt
+                    6. Slet superhelt
                     9. Afslut programmet
                         """);
             brugerValg = sc.nextInt();
@@ -47,21 +69,27 @@ public class UserInterface {
                 database.addSuperhero(superheroName, realName, yearCreated, superPowers, isHuman, strength);
                 numberOfSuperheroes++;
             } else if (brugerValg == 2) {
-                if(!database.getSuperheroes().isEmpty()){
+                if (!database.getSuperheroes().isEmpty()) {
                     System.out.println("Liste af superhelte:\n");
                     System.out.println(database.getArrayList(numberOfSuperheroes));
-                }else System.out.println("Der findes ingen superhelte i databasen.\n");
+                } else System.out.println("Der findes ingen superhelte i databasen.\n");
             } else if (brugerValg == 3) {
+                caseSortSuperheroes(); //TODO
+            } else if (brugerValg == 4) {
                 System.out.println("Tast navnet. eller del af navnet, på den superhelt, du vil finde:");
                 String searchQuery = sc.next();
                 database.searchSuperhero(searchQuery);
-            } else if (brugerValg == 4) {
-                System.out.println("Liste af superhelte:\n");
-                System.out.println(database.getArrayList(numberOfSuperheroes));
-                System.out.println("\n Hvilken superhelt vil du ændre? Tast venligst nummer: ");
-                int superheroNumber = sc.nextInt();
-                database.editSuperhero(database.getSuperhero(superheroNumber));
-            } else if(brugerValg == 5) {
+            } else if (brugerValg == 5) {
+                if (!database.getSuperheroes().isEmpty()) {
+                    System.out.println("Liste af superhelte:\n");
+                    System.out.println(database.getArrayList(numberOfSuperheroes));
+                    System.out.println("Hvilken superhelt vil du ændre? Tast venligst nummer: ");
+                    int superheroNumber = sc.nextInt();
+                    if (database.getSize() > superheroNumber) {
+                        database.editSuperhero(database.getSuperhero(superheroNumber));
+                    } else System.out.println("Tast venligst et nummer indenfor antallet af superhelte.");
+                }
+            } else if (brugerValg == 6) {
                 System.out.println("Fjern en superhelt fra din database: \n");
                 database.getArrayList(numberOfSuperheroes);
                 System.out.print("Angiv nummeret på superhelten, som ønskes fjernet: ");
@@ -69,29 +97,44 @@ public class UserInterface {
                 database.removeSuperhero();
                 numberOfSuperheroes--;
             } else if (brugerValg == 9) {
+                try {
+                    index = 0;
+                    FileOutputStream f = new FileOutputStream("superheroes.txt");
+                    ObjectOutputStream o = new ObjectOutputStream(f);
+                    if (!database.getSuperheroes().isEmpty()) {
+                        while (index < database.getSize()) {
+                            o.writeObject(database.get(index));
+                            index++;
+                        }
+                    }
+                    f.close();
+                    o.close();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
                 System.exit(1);
             }
-        }while(brugerValg != 9);
+        } while (brugerValg != 9);
     }
 
-    public int readInteger(){
-        while (!sc.hasNextInt()){
+    public int readInteger() {
+        while (!sc.hasNextInt()) {
             String text = sc.next();
             System.out.println("Du må ikke indtaste '" + text + "' , det skal være et helt tal, uden decimaler.");
         }
         return sc.nextInt();
     }
 
-    public double readDouble(){
-        while (!sc.hasNextDouble()){
+    public double readDouble() {
+        while (!sc.hasNextDouble()) {
             String text = sc.next();
             System.out.println("Du må ikke indtaste '" + text + "' , det skal være et tal, med eller uden decimaler.");
         }
         return sc.nextDouble();
     }
 
-    public boolean checkBoolean(){
-        boolean shouldContinue = true;
+    public boolean checkBoolean() {
+        boolean shouldContinue;
         boolean isHuman = true;
         String isHumanQ;
         do {
@@ -107,9 +150,10 @@ public class UserInterface {
                 System.out.println("Tast venligst 'j' eller 'n'.");
                 shouldContinue = true;
             }
-        }while (shouldContinue);
+        } while (shouldContinue);
         return isHuman;
     }
+
     public void caseSortSuperheroes() {
         System.out.println("Sorter efter et af følgende kriterier:");
         System.out.println("""
@@ -153,6 +197,8 @@ public class UserInterface {
                 Controller.sortBystrength();
                 numberOfSuperheroes();
                 break;
+            default:
+                System.out.println("Vælg venligst et nummer mellem 1 og 6.");
         }
     }
 

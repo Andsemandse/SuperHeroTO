@@ -1,6 +1,6 @@
 package Shero;
-
-public class Superhero {
+import java.io.Serializable;
+public class Superhero implements Serializable {
 
     //Attributer
     private String superheroName;
@@ -65,6 +65,7 @@ public class Superhero {
     }
 
     //custom toString metode
+    @Override
     public String toString(){
         String isHumanString = "";
         if (isHuman == true){

@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Tilføjede redigeringsfunktion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FH/Filehandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Filehandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shero/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shero/Superhero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SuperPowerComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SuperPowerComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/YearCreatedComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/YearCreatedComparator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

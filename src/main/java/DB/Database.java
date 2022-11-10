@@ -26,6 +26,9 @@ public class Database {
         Superhero superhero = new Superhero(superheroName, realName, yearCreated, superPowers, isHuman, strength);
         database.add(superhero);
     }
+    public void addHeroToDatabase(Superhero superhero){
+        database.add(superhero);
+    }
 
     public String getArrayList(int x) {
         for (int i = 0; i < x; i++) {
@@ -104,4 +107,7 @@ public class Database {
         System.out.println("Fjernet superhelt nummer " + UserInterface.removeNumber + " fra databasen:");
     }
 
+    public Object get(int i) {
+       return database.get(i);
+    }
 }
