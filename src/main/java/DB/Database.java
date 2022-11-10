@@ -1,13 +1,13 @@
 package DB;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
+
 import Shero.Superhero;
 import Ui.UserInterface;
-import DB.Database;
 
 
-public class Database {
+
+public class Database{
 
     private String superheroName;
     private String realName;
@@ -105,6 +105,7 @@ public class Database {
         System.out.println("Superhelten er blevet redigeret!\n");
     }
 
+
     //methods for test purposes
     public ArrayList<Superhero> getSuperheroes() {
         return database;
@@ -116,7 +117,7 @@ public class Database {
 
     public void removeSuperhero() {
         database.remove(UserInterface.removeNumber - 1);
-        System.out.println("Fjernet superhelt nummer " + UserInterface.removeNumber + " fra databasen:");
+        System.out.println("Fjernet superhelt nummer " + UserInterface.removeNumber + " fra databasen.");
     }
 
     public Object get(int i) {

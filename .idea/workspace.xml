@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Programmet gemmer superheltene til en tekstfil, når man afslutter, og indlæser dem fra samme tekstfil, når programmet starter.">
+    <list default="true" id="4a298f75-73c2-406d-bb65-5b20e26dba57" name="Changes" comment="Lavet nogle små interfacemæssige ændringer ift redigering af superhelte">
       <change afterPath="$PROJECT_DIR$/src/main/java/FH/Filehandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Database.java" afterDir="false" />
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668080203630</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lavet nogle små interfacemæssige ændringer ift redigering af superhelte">
+      <created>1668082097974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668082097974</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,7 @@
     <MESSAGE value="Vores helte kan nu slettes, ændringer i Database og Userinterface" />
     <MESSAGE value="Fixede bug som crashede programmet, hvis man forsøgte at vise alle helte efter man havde slettet en/den sidste.&#10;Tilføjede besked, når man prøver at få vist listen, men den er tom." />
     <MESSAGE value="Programmet gemmer superheltene til en tekstfil, når man afslutter, og indlæser dem fra samme tekstfil, når programmet starter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Programmet gemmer superheltene til en tekstfil, når man afslutter, og indlæser dem fra samme tekstfil, når programmet starter." />
+    <MESSAGE value="Lavet nogle små interfacemæssige ændringer ift redigering af superhelte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lavet nogle små interfacemæssige ændringer ift redigering af superhelte" />
   </component>
 </project>
